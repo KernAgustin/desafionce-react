@@ -13,11 +13,8 @@ export default function ItemDetailContainer() {
 
   useEffect(() => {
     setLoading(true);
-    // debemos pasar la base de datos y la coleccion
     const coleccionProductos = collection(db, "products")
-    // hacemos una referencia hacia un documento en particular
     const referenciaDoc = doc(coleccionProductos, id)
-    // traemos un documento
     getDoc(referenciaDoc)
     .then((result) => {
       setItemDetail({

@@ -5,19 +5,18 @@ import ItemCount from './ItemCount';
 
 export default function ItemDetail({ itemDetail }) {
 
-  const { name, description, category, price, stock, imgUrl, id } = itemDetail;
+  const { name, description, category, price, stock, img, id } = itemDetail;
   const [count, setCount] = useState(1);
-  const [comprar, setComprar] = useState(false);
+  const [setComprar] = useState(false);
   const {addItem} = useCart()
 
   const onAdd = () => {
-    /* SE DEFINE LA COMPRA Y SE AGREGAN LOS PRODUCTOS AL CARRITO */
     let purchase ={
       id,
       name,
       price,
       stock,
-      imgUrl,
+      img,
       quantity: count,
     }
     addItem(purchase)
@@ -30,7 +29,7 @@ export default function ItemDetail({ itemDetail }) {
         <Image
           height='600px'
           objectFit='cover'
-          src={imgUrl}
+          src={img}
         />
         <VStack alignItems="start">
           <HStack alignItems="start" justifyContent="space-between" w="100%">

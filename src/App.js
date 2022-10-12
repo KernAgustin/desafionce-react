@@ -7,14 +7,10 @@ import { ChakraProvider } from '@chakra-ui/react';
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer';
-import { useState } from 'react';
 import { CartProvider } from './context/CartContext'
 import Order from './components/Order';
 
 export default function App() {
-
-  const [color, setColor] = useState('dark');
-
   return (
     <ChakraProvider>
       <CartProvider>

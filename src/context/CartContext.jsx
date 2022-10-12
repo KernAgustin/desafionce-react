@@ -1,3 +1,4 @@
+
 const { createContext, useState, useContext } = require("react");
 
 export const CartContext = createContext();
@@ -30,7 +31,7 @@ export const CartProvider = ({children}) => {
   }
 
   const isInCart = (id) => {
-    //retorna false o true
+
     return cart.some((prod) => prod.id === id);
   }
 
@@ -49,5 +50,4 @@ export const CartProvider = ({children}) => {
   )
 }
 
-//custom hook
 export const useCart = () => useContext(CartContext)

@@ -46,18 +46,18 @@ export default function Order() {
             <VStack maxW={"lg"} gap={"10px"}>
               <Heading size='lg'>Ingresa tus datos para finalizar</Heading>
               <FormControl isRequired>
-                <Input value={name} onChange={(e) => setName(e.target.value)} variant='filled' placeholder='Ingresa tu nombre' size='md' type={'text'} />
+                <Input value={name} onChange={(e) => setName(e.target.value)} variant='filled' placeholder='Ingresa tu nombre.' size='md' type={'text'} />
               </FormControl>
               <FormControl isRequired>
-                <Input value={email} onChange={(e) => setEmail(e.target.value)} variant='filled' placeholder='Ingresa tu correo' size='md' type={'email'} />
+                <Input value={email} onChange={(e) => setEmail(e.target.value)} variant='filled' placeholder='Ingresa tu correo electronico.' size='md' type={'email'} />
               </FormControl>
               <FormControl isRequired>
-                <Input value={phone} onChange={(e) => setPhone(e.target.value)} variant='filled' placeholder='Ingresa tu teléfono' size='md' type={'number'} />
+                <Input value={phone} onChange={(e) => setPhone(e.target.value)} variant='filled' placeholder='Ingresa tu teléfono.' size='md' type={'number'} />
               </FormControl>
 
               <Button type={'submit'} alignSelf="center" p={"10px"} size="1.4rem" colorScheme='#010224' variant='outline' _hover={{
-                background: "#010224",
-                color: "#f4f4f6"
+                background: "#1E8449",
+                color: "#ffffff"
               }} >
                 Terminar compra</Button>
 
@@ -67,7 +67,7 @@ export default function Order() {
           : <VStack>
             <Heading size='lg'>¡Gracias por tu compra!</Heading>
             <Text fontSize='lg'>Tu orden se registró correctamente con el id: {idCompra}</Text>
-            <Button background='#6393ff' color='#ffffff' onClick={() => navegar('/')} _hover={{ background: '#1a67ff' }} my="2rem">Volver a la tienda</Button>
+            <Button background='#44a970e0' color='#ffffff' onClick={() => navegar('/')} _hover={{background: '#1E8449'}} my="2rem">Volver a la tienda</Button>
           </VStack>}
       </Flex>
     </Container>

@@ -36,20 +36,19 @@ export default function ItemCount({ stock, initial, onAdd, count, setCount }) {
   return (
     <Flex direction="column" py="1.4rem" px="0px" gap="1rem">
       <HStack>
-        <Button colorScheme='teal' variant='ghost' disabled={disableSubstractButton} onClick={restar}>
+        <Button color='#1E8449' colorScheme='teal' variant='ghost' disabled={disableSubstractButton} onClick={restar}>
           <Icon as={FiMinus} h="20px" w="20px" m="0px 8px" />
         </Button>
         <p>{count}</p>
-        <Button colorScheme='teal' variant='ghost' disabled={disableAddButton} onClick={sumar}>
+        <Button color='#1E8449' colorScheme='teal' variant='ghost' disabled={disableAddButton} onClick={sumar}>
           <Icon as={FiPlus} h="20px" w="20px" m="0px 8px" />
         </Button>
       </HStack>
-      {/* SE AGREGA AL BOTON SUMAR CARRITO UN REINICIO DE CONTADOR, PENSANDO QUE POSTERIORMENTE ESTE BOTON DEBERÍA ENVIAR A CARTWIDGET EL OBJETO A COMPRAR Y LA CANTIDAD */}
       <HStack>
-        <Button colorScheme='teal' variant='outline' onClick={() => onAdd()}>
+        <Button colorScheme='' variant='outline' onClick={() => onAdd()}>
           Agregar al carrito
         </Button>
-        <Button colorScheme='teal' variant='solid' onClick={() => navegar('/cart')} >Ir al carrito</Button>
+        <Button background='#44a970e0' colorScheme='teal' variant='solid' onClick={() => navegar('/cart')}  _hover={{background: '#1E8449'}} >Ir al carrito</Button>
       </HStack>
     </Flex>
   )

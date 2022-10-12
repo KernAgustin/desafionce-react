@@ -16,7 +16,7 @@ export default function Cart() {
           ? <Center>
             <VStack>
             <Text fontSize='2xl' my="1rem">Tu carrito está vacío</Text>
-            <Button background='#6393ff' color='#ffffff' onClick={() => navegar('/')} _hover={{background: '#1a67ff'}} my="2rem">Volver a la tienda</Button>
+            <Button background='#44a970e0' color='#ffffff' onClick={() => navegar('/')} _hover={{background: '#1E8449'}} my="2rem">Volver a la tienda</Button>
             </VStack>
             </Center>
           : <VStack>
@@ -26,8 +26,8 @@ export default function Cart() {
           ))}
           <Text fontSize='lg' my="2rem">Total a pagar: ${cartTotal()}</Text>
           <HStack>
-          <Button colorScheme='gray' my="2rem" onClick={clear}>Vaciar Carrito</Button>
-          <Button background='#6393ff' onClick={() => navegar(`/order`)} color='#ffffff' _hover={{background: '#1a67ff'}} my="2rem">Terminar Compra</Button>
+          <Button background='#44a970e0' colorScheme='#44a970e0' my="2rem" onClick={clear} _hover={{background: '#1E8449'}}>Vaciar Carrito</Button>
+          <Button background='#44a970e0' onClick={() => navegar(`/order`)} color='#ffffff' _hover={{background: '#1E8449'}} my="2rem">Terminar Compra</Button>
           </HStack>
           </VStack>
         }

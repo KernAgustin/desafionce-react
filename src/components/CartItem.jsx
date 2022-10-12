@@ -5,16 +5,16 @@ import { FiTrash } from 'react-icons/fi'
 
 export default function CartItem({ item }) {
 
-  const { imgUrl, name, quantity, price } = item
+  const { img, name, quantity, price } = item
 
   return (
     <Container maxW="container.md" maxH="full" py="1rem" my="1rem" border={"1px solid "} borderRadius={4}>
       <HStack justifyContent='space-between' alignItems='center' >
         <Image
-          height='50px'
-          width='50px'
+          height='150px'
+          width='150px'
           objectFit='cover'
-          src={imgUrl}
+          src={img}
         />
         <Heading as='h4' size='sm'>{name}</Heading>
 
